@@ -24,3 +24,12 @@ import test_to_import_2 as t2
 
 parent_directory = os.path.dirname(current_directory)
 print (parent_directory)
+
+#now let's see how to use this directory aspects to save .json file with compas
+
+import compas 
+
+what_to_save_as_json_file = {}
+where_to_save_the_json_file = os.path.join(current_directory, 'exported_json_file.json')
+
+compas.json_dump(what_to_save_as_json_file, where_to_save_the_json_file, True)
